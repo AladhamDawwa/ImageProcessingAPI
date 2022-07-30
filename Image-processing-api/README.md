@@ -1,4 +1,4 @@
-# Weather Journal App
+# Image processing API
 
 **This project is a part of udacity-egfwd advanced fullstack nanodegree.**
 
