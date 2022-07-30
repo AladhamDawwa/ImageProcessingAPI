@@ -4,17 +4,17 @@ import validate from '../../util/queryValidation';
 
 describe('Test image processing via sharp', (): void => {
   it('expecting an error (invalid width value)', async (): Promise<void> => {
-    const error: string | undefined = await validate('fjord', '-99', '99');
+    const error: string | undefined | number = await validate('fjord', '-99', '99');
     expect(error).toBeDefined();
   });
 
   it('raises an error (filename does not exist)', async (): Promise<void> => {
-    const error: string | undefined = await validate('foo', '99', '99');
+    const error: string | undefined | number = await validate('foo', '99', '99');
     expect(error).toBeDefined();
   });
 
   it('succeeds to validate file (existing file, valid size values)', async (): Promise<void> => {
-    const error: string | undefined = await validate('fjord', '99', '99');
+    const error: string | undefined | number = await validate('fjord', '99', '99');
     expect(error).toBeUndefined();
   });
 

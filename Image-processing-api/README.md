@@ -1,4 +1,4 @@
-# Image processing API
+# Weather Journal App
 
 **This project is a part of udacity-egfwd advanced fullstack nanodegree.**
 
@@ -36,3 +36,14 @@ This is an api that takes an image and resizes it using sharp
 - Build to JS: npm run build
 - Es-Lint: npm run lint
 - Prettier: npm run prettier
+
+## :notes:
+- http://localhost:3000/api
+just welcome page
+
+- http://localhost:3000/api/images?filename=fjord&width=200&height=200
+Will display the image with name fjord resized to have width of 200 and height of 200 
+**any wrong input will cause a message to appear to illustrate what went wrong
+
+- Source images are placed at (assets/images/full) folder.
+- Resized images thumbs will be stored in (assets/images/thumb) folder.

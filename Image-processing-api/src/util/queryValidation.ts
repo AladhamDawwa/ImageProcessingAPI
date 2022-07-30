@@ -15,7 +15,7 @@ const validate = async (
   filename: string,
   width: string,
   height: string
-): Promise<undefined | string> => {
+): Promise<undefined | string | number> => {
   // Check image availability
   try {
     if (!(await getAvailableImageNames()).includes(filename as string)) {
@@ -53,7 +53,7 @@ const validate = async (
         `${filename}-${width}x${height}.jpg`
       )
     );
-    return 'image exists already at thumb folder';
+    return 1;
   } catch {
     return;
   }

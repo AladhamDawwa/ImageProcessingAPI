@@ -17,14 +17,14 @@ describe('Endpoint testing using jasmine & supertest', (): void => {
 
   it('gets /api/images', async (): Promise<void> => {
     const response: supertest.Response = await request.get(
-      '/api/images?filename=fjord&width=199&height=199'
+      '/api/images'
     );
     expect(response.status).toBe(200);
   });
 
   it('gets /api/images?filename=fjord&height=199 (missing args)', async (): Promise<void> => {
     const response: supertest.Response = await request.get(
-      '/api/images?filename=fjord&width=199&height=199'
+      '/api/images?filename=fjord&height=199'
     );
     expect(response.status).toBe(200);
   });
